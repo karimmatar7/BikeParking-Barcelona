@@ -4,6 +4,12 @@ const camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerH
 const renderer = new THREE.WebGLRenderer({ antialias: true });
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
+const isLocal = window.location.hostname === "127.0.0.1" || window.location.hostname === "localhost";
+
+const apiBase = isLocal
+  ? "http://localhost:3000"
+  : window.location.origin; 
+
 
 // Controls
 const controls = new THREE.OrbitControls(camera, renderer.domElement);
@@ -124,7 +130,7 @@ let allData = [];
 const districtSet = new Set();
 const typeSet = new Set();
 
-fetch("http://localhost:3000/bike-parking")
+fetch(`${apiBase}/bike-parking`)
   .then(response => response.json())
   .then(apiData => {
     const records = apiData.result.records;
