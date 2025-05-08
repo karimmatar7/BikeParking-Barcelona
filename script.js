@@ -8,7 +8,9 @@ const isLocal = window.location.hostname === "127.0.0.1" || window.location.host
 
 const apiBase = isLocal
   ? "http://localhost:3000"
-  : window.location.origin; 
+  : window.location.origin === "file://"
+    ? "https://bikeparking-barcelona.onrender.com"
+    : window.location.origin;
 
 
 // Controls
