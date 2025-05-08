@@ -21,6 +21,7 @@ This project visualizes the **bike parking places** in the city of **Barcelona**
    node proxy.js
    and then start index.html with live server
 
+[Barcelona Bikes](https://bikeparking-barcelona.onrender.com)
 
 ## Author
 
