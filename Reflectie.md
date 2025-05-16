@@ -21,7 +21,6 @@ Dit endpoint serveert de statische fietsparkeren data in JSON-formaat.
 3. Data Structuur
 De JSON-data bestaat uit records, waarbij elk record een fietsparkeerstation vertegenwoordigt. Hieronder is een voorbeeld van de structuur van de data:
 
-   ```bash
 {
   "result": {
     "records": [
@@ -37,9 +36,6 @@ De JSON-data bestaat uit records, waarbij elk record een fietsparkeerstation ver
     ]
   }
 }
-
-   ```
-
 
 name: De naam van het fietsparkeren station.
 
